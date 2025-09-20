@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>affitimes | Your Path to Success</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition is-active"><div class="spinner"></div></div>
+    <div class="overlay"></div>
+    <div class="site-wrapper">
+        <header class="header">
+            <nav class="navbar container">
+                <a href="index.html" class="logo">affitimes</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="hsc-one-shot.html" class="nav-link">HSC One Shot</a></li>
+                    <li><a href="admission.html" class="nav-link">Admission Series</a></li>
+                    <li><a href="#" class="nav-link">Study Materials</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="theme-switcher" id="theme-switcher"><i class="fas fa-moon"></i></button>
+                    <button class="menu-icon" id="menu-icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+                </div>
+            </nav>
+        </header>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="index.html" class="logo">affitimes</a><button class="close-btn" id="close-btn">&times;</button></div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-link active"><i class="fas fa-home-alt"></i><span>Home</span></a>
+                <a href="hsc-one-shot.html" class="nav-link"><i class="fas fa-rocket"></i><span>HSC One Shot</span></a>
+                <a href="admission.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Admission Series</span></a>
+                <a href="#" class="nav-link"><i class="fas fa-book-open"></i><span>Study Materials</span></a>
+                <a href="#" class="nav-link"><i class="fas fa-university"></i><span>Admission</span></a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <section class="hero-section-new">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title" style="--i:1">Unlock Your <span class="highlight">Full Potential</span></h1>
+                        <p class="hero-subtitle" style="--i:2">HSC এবং অ্যাডমিশনের সেরা প্রস্তুতি নিন দেশের সেরা শিক্ষকদের বাছাই করা ক্লাস দিয়ে। আপনার সফলতার পথচলা শুরু হোক এখান থেকেই।</p>
+                        <div class="hero-buttons" style="--i:3">
+                            <a href="#subjects-overview" class="btn-primary">Explore Subjects</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-section" id="features">
+                <div class="container">
+                    <h2 class="section-title">Why It's Special</h2>
+                    <div class="grid-container features-grid">
+                        <div class="feature-card animated-card">
+                            <div class="feature-icon"><i class="fas fa-play-circle"></i></div>
+                            <h3>Powerful Player</h3>
+                            <p>Enjoy learning with a state-of-the-art video player, featuring quality controls, speed adjustments, and a seamless experience.</p>
+                        </div>
+                        <div class="feature-card animated-card">
+                            <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                            <h3>Organized Content</h3>
+                            <p>All lectures are perfectly organized by subject and chapter, so you can find what you need in seconds.</p>
+                        </div>
+                         <div class="feature-card animated-card">
+                            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                            <h3>Lightning Fast</h3>
+                            <p>The entire website is optimized for speed, ensuring a smooth and lag-free learning environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="subjects-overview" class="content-section" style="background-color: var(--card-bg);">
+                 <div class="container">
+                    <h2 class="section-title">All Available Subjects</h2>
+                    <div id="subject-list-home" class="grid-container subject-grid"></div>
+                 </div>
+            </section>
+            <section id="featured-videos" class="content-section">
+                <div class="container">
+                    <h2 class="section-title">Featured Classes</h2>
+                    <div id="featured-video-list" class="grid-container"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"><div class="container"><p>&copy; 2025 affitimes. All Rights Reserved.</p></div></footer>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const subjectContainer = document.getElementById('subject-list-home');
+            if(subjectContainer) {
+                Object.entries(database.subjects).forEach(([key, subject]) => {
+                    subjectContainer.innerHTML += `<a href="subject.html?type=series&id=${key}" class="subject-card animated-card"><h3 class="subject-title">${subject.name}</h3><p class="subject-subtitle">${subject.bn_name}</p></a>`;
+                });
+            }
+            const featuredContainer = document.getElementById('featured-video-list');
+            if (featuredContainer) {
+                const featuredVideoKeys = ['phys1_ch2_lec1', 'chem2_ch2_lec1', 'math1_ch10_lec1', 'bio2_ch4_lec1'];
+                featuredVideoKeys.forEach(key => {
+                    const video = database.videos[key];
+                    if (video) {
+                        featuredContainer.innerHTML += `<a href="video.html?id=${key}" class="video-card animated-card"><div class="video-thumbnail"><img src="https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg" alt="${video.title}" loading="lazy"><div class="play-icon"><i class="fas fa-play"></i></div></div><div class="video-card-info"><h4 class="video-card-title">${video.title}</h4><p class="video-card-instructor">শিক্ষক: ${video.instructor.name}</p></div></a>`;
+                    }
+                });
+            }
+            // After adding cards to the DOM, initialize their animations
+            initializeScrollAnimations();
+        });
+    </script>
+</body>
+</html>
