@@ -1,7 +1,7 @@
-# *** চূড়ান্ত কনফিগারেশন ***
+# *** চূড়ান্ত এবং লগইন-বিহীন কনফিগারেশন ***
 backend:
-  name: github # পরিবর্তন এখানে: git-gateway এর বদলে github
-  repo: boyhac1/affitimes- # আপনার রিপোজিটরির নাম
+  name: github
+  repo: boyhac1/affitimes-
   branch: main
 
 media_folder: "assets/images/uploads"
