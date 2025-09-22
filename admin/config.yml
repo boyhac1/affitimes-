@@ -1,9 +1,8 @@
+# *** চূড়ান্ত কনফিগারেশন ***
 backend:
-  name: git-gateway
+  name: github # পরিবর্তন এখানে: git-gateway এর বদলে github
+  repo: boyhac1/affitimes- # আপনার রিপোজিটরির নাম
   branch: main
-
-# আপনার রিপোজিটরির সাথে সংযোগ স্থাপন করা হয়েছে
-repo: "boyhac1/affitimes-"
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
