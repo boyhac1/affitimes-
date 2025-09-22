@@ -3,84 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>affitimes - অ্যাডমিন প্যানেল</title>
-  <!-- Netlify Identity Widget যা লগইন করতে সাহায্য করবে -->
+  <title>affitimes - Admin Panel</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Decap CMS লোড করার মূল স্ক্রিপ্ট -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
-</html>```
-
-#### **ফাইল ২: `admin/config.yml`**
-এই ফাইলে নিচের কোডটি কপি করে পেস্ট করুন।
-
-**গুরুত্বপূর্ণ:** নিচের কোডে `repo: "owner/repo"` লাইনটি খুঁজে বের করুন এবং **`owner/repo`**-এর জায়গায় **আপনার নিজের GitHub ইউজারনেম এবং রিপোজিটরির নাম** লিখুন।
-
-```yaml
-# Decap CMS Configuration for affitimes
-
-backend:
-  name: git-gateway
-  branch: main # আপনার রিপোজিটরির মূল ব্রাঞ্চের নাম
-
-# খুবই গুরুত্বপূর্ণ: "owner/repo" এর জায়গায় আপনার GitHub ইউজারনেম/রিপোজিটরির নাম দিন।
-# উদাহরণ: repo: "shahriar-konok/affitimes"
-repo: "owner/repo"
-
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
-
-collections:
-  - name: "main_database"
-    label: "সাইটের সকল ডেটা"
-    files:
-      - label: "প্রধান ডেটাবেজ"
-        name: "database"
-        file: "data.js"
-        
-        parser:
-          format: "json-frontmatter"
-          frontmatter_delimiter: "const database = "
-
-        fields:
-          - label: "Admission Subjects"
-            name: "subjects"
-            widget: "list"
-            summary: "{{fields.name}} - {{fields.bn_name}}"
-            fields:
-              - { label: "Subject ID (e.g., phys1)", name: "id", widget: "string" }
-              - { label: "Name (English)", name: "name", widget: "string" }
-              - { label: "Name (Bangla)", name: "bn_name", widget: "string" }
-              - label: "Chapters"
-                name: "chapters"
-                widget: "list"
-                summary: "{{fields.name}}"
-                fields:
-                  - { label: "Chapter ID", name: "id", widget: "string" }
-                  - { label: "Chapter Name (English)", name: "name", widget: "string" }
-                  - { label: "Chapter Name (Bangla)", name: "bn_name", widget: "string" }
-          
-          - label: "HSC One Shot Subjects"
-            name: "oneShotSubjects"
-            widget: "list"
-            summary: "{{fields.name}}"
-            fields:
-              # ... ( আগের উত্তরে দেওয়া কোড অনুযায়ী বাকি অংশ যোগ করুন )
-
-          - label: "Videos"
-            name: "videos"
-            widget: "list"
-            summary: "{{fields.title}} (ID: {{fields.key}})"
-            fields:
-              - { label: "Video Key (Unique ID)", name: "key", widget: "string" }
-              - { label: "Chapter ID", name: "chapterId", widget: "string" }
-              - { label: "Video Title", name: "title", widget: "string" }
-              - { label: "YouTube Video ID", name: "youtubeId", widget: "string" }
-              - label: "Instructor"
-                name: "instructor"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-              # ... ( আগের উত্তরে দেওয়া কোড অনুযায়ী বাকি অংশ যোগ করুন )
+</html>
