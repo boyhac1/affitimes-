@@ -1,8 +1,10 @@
-# *** চূড়ান্ত এবং লগইন-বিহীন কনফিগারেশন ***
 backend:
   name: github
-  repo: boyhac1/affitimes-
+  repo: boyhac1/affitimes- # আপনার রিপোজিটরির নাম
   branch: main
+
+# এই লাইনটি খুবই গুরুত্বপূর্ণ
+publish_mode: editorial_workflow
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
