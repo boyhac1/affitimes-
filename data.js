@@ -140,7 +140,7 @@ const database = {
         { key: 'phys1_ch2_lec2', chapterId: 'phys1_ch2', title: "Vector Class 02", youtubeId: "mpYDxBZAg4U", instructor: { name: "Shahriar Nazim" }, downloads: { lectureSheet: "#" } },
         { key: 'phys1_ch2_lec3', chapterId: 'phys1_ch2', title: "Vector Class 03", youtubeId: "cGweIyDH3Fc", instructor: { name: "Shahriar Nazim" }, downloads: { lectureSheet: "#" } },
         { key: 'phys1_ch2_lec4', chapterId: 'phys1_ch2', title: "Vector Class 04", youtubeId: "AW61Y9QzaoE", instructor: { name: "Shahriar Nazim" }, downloads: { lectureSheet: "#" } },
-        { key: 'phys1_ch3_lec1', chapterId: 'phys1_ch3', title: "Newtonian Mechanics Class 01", youtubeId: "wZmm4hyT3ao", instructor: { name: "Shahriar Nazim" }, downloads: { lectureSheet: "#" } },
+        { key: 'phys1_ch3_lec1', chapterId: 'phys1_ch3', title: "Newtonian Mechanics Class 01", youtubeId: "wZmm4hyT3ao", instructor: { name: "Shahriar Nazim" }, downloads: { lectureSheet: "https://drive.google.com/drive/u/0/mobile/folders/1bROtWtERKm6RKoXLTEmKrgCZihmkrPqc/1Z7PKM0HtZzz7-mC1jpdjw6z6R_Ufs0lO?usp=drive_link&sort=13&direction=a" } },
         { key: 'phys1_ch3_lec2', chapterId: 'phys1_ch3', title: "Newtonian Mechanics Class 02", youtubeId: "Oq63MxMHz1A", instructor: { name: "Shahriar Nazim" }, downloads: { lectureSheet: "#" } },
         { key: 'phys1_ch5_lec1', chapterId: 'phys1_ch5', title: "Work, Energy and Power Class 01", youtubeId: "be2ryBJO_44", instructor: { name: "Shariar Nazim" }, downloads: { lectureSheet: "#" } },
         { key: 'phys1_ch6_lec1', chapterId: 'phys1_ch6', title: "Gravitation Class 01", youtubeId: "HQeOyrPfqfU", instructor: { name: "Shariar Nazim" }, downloads: { lectureSheet: "#" } },
