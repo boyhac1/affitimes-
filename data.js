@@ -159,7 +159,10 @@ const database = {
         { key: 'phys2_ch7_lec3', chapterId: 'phys2_ch7', title: "Physical Optics Class 03", youtubeId: "rgbdgR85t2I", instructor: { name: "শিক্ষক" }, downloads: { lectureSheet: "#" } },
         { key: 'phys2_ch8_lec1', chapterId: 'phys2_ch8', title: "Modern Physics Class 01", youtubeId: "JXjl4JRJa88", instructor: { name: "শিক্ষক" }, downloads: { lectureSheet: "#" } },
         { key: 'phys2_ch8_lec2', chapterId: 'phys2_ch8', title: "Modern Physics Class 02", youtubeId: "ySL44xqQ3Kw", instructor: { name: "শিক্ষক" }, downloads: { lectureSheet: "#" } },
-        { key: 'phys2_ch9_lec1', chapterId: 'phys2_ch9', title: "Atomic Models Class 01", youtubeId: "EAX10C9MI0c", instructor: { name: "শিক্ষক" }, downloads: { lectureSheet: "#" } },
+        { key: 'phys2_ch9_lec1', chapterId: 'phys2_ch9', title: "Atomic Models Class 01", youtubeId: "uaerkidMaRk", instructor: { name: "শিক্ষক" }, downloads: { lectureSheet: "#" } },
+        { key: 'phys2_ch9_lec2', chapterId: 'phys2_ch9', title: "Atomic Models Class 02", youtubeId: "hvDCLXH5rqw", instructor: { name: "শিক্ষক" }, downloads: { lectureSheet: "#" } },
+   
+
         { key: 'phys2_ch10_lec1', chapterId: 'phys2_ch10', title: "Semiconductors Class 01", youtubeId: "648e5r4iB_E", instructor: { name: "শিক্ষক" }, downloads: { lectureSheet: "#" } },
 
         // --- Chemistry 1st Paper ---
